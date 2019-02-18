@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ConvenioServicioService } from 'src/app/servicios/convenio-servicio.service';
 import { Convenio } from 'src/app/interfaces/convenio';
 import {NgForm} from '@angular/forms';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-ruta-convenios',
   templateUrl: './ruta-convenios.component.html',
@@ -17,7 +19,8 @@ cols:any [];
   show: boolean = false ;
   show1: boolean = true ;
   hideme= true ;
-  constructor(private readonly _convenioServicio: ConvenioServicioService) {
+  constructor(private readonly _convenioServicio: ConvenioServicioService,
+    private readonly _router:Router) {
 
    }
 
@@ -84,6 +87,11 @@ cols:any [];
   //  console.log(busqueda+"Busqueda es:");
    
 
+  }
+
+  Verpdf(id:number){
+
+    this._router.navigate(['/pdf-convenios/'+id]);
   }
 
 

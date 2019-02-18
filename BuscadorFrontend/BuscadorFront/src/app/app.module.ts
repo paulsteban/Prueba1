@@ -7,16 +7,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { RutaPDFComponent } from './rutas/ruta-pdf/ruta-pdf.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 @NgModule({
   declarations: [
     AppComponent,
-    RutaConveniosComponent
+    RutaConveniosComponent,
+    RutaPDFComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule, FormsModule ,
-    TableModule,BrowserAnimationsModule
+    TableModule,BrowserAnimationsModule,PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

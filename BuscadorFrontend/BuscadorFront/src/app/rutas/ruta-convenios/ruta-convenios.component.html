@@ -80,10 +80,10 @@
           <strong>ORGANIZACION</strong>:  <a (click)="hideme = !hideme">{{busqueda.organizacion}}</a>
           <div [hidden]="hideme"> Link de la univerdidad</div><br></td>
         
-        <td width="200" valign="top" >{{busqueda.objeto}}</td>
-        <td width="370" valign="top" >{{busqueda.tipo}}
+        <td width="370" valign="top" >{{busqueda.objeto}}</td>
+        <td width="200" valign="top" >{{busqueda.tipo}}
         </td>
-        <td width="370" valign="top" >Documentos</td>
+        <td width="370" valign="top" ><button type="button" class="btn btn-primary" (click)="Verpdf(busqueda.id)">Revisar Convenio</button></td>
     </tr>
     </ng-template>
   </p-table>
