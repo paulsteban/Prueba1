@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ConvenioServicioService {
 nombreModelo = '/Convenios'
+totalconvenios: Convenio[] = [];
 url1 = 'http://localhost:1337/Convenios?limit=100'
   constructor(private readonly _httpClient: HttpClient) { }
 

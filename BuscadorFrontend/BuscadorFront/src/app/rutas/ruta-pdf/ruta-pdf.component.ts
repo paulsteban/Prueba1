@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-ruta-pdf',
@@ -8,7 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RutaPDFComponent implements OnInit {
    id;
-  constructor(private readonly _activatedRoute: ActivatedRoute) { }
+  constructor(private readonly _activatedRoute: ActivatedRoute,
+    private readonly _router:Router,) { }
 
   ngOnInit() {
     const rutaActiva$ = this._activatedRoute.params;
@@ -20,6 +21,10 @@ export class RutaPDFComponent implements OnInit {
         }
       );
   
+  }
+  regresar(){
+
+    this._router.navigate(['/convenios/']);
   }
 
 }

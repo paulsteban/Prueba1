@@ -10,14 +10,23 @@
     <!-- Fin Imagen -->
   <form #f="ngForm" (ngSubmit)="onClickMe(f)" novalidate >
   <div class="row">
-    
+      <div class="col-lg-4">
+        </div>
+          <div class="col-lg-4">
+            <h2>Criterios de Búsqueda</h2>
+            </div>
+              <div class="col-lg-4">
+                </div>
+
+  </div>  
+    <div class="row"> 
     <div class="col-lg-4">
         <div class="input-group mb-4">
         <div class="input-group-prepend">
         
         <label class="input-group-text" for="BrowOrganizacion">Organizacion</label>
          </div>
-              <input class="custom-select" list="broworganizacion" id="BrowOrganizacion" name="BrowOrganizacion"   #nombreControl ngModel/>
+              <input class="custom-select" list="broworganizacion" id="BrowOrganizacion" name="BrowOrganizacion"  autocomplete="off" #nombreControl ngModel/>
               <datalist id="broworganizacion" >
                 <option *ngFor="let cbxorganizacio of cbxorganizacion" value=  {{cbxorganizacio}}>
                    
@@ -29,9 +38,9 @@
 <div class="input-group mb-4">
     <div class="input-group-prepend">
     
-    <label class="input-group-text" for="BrowPais">Pais</label>
+    <label class="input-group-text" for="BrowPais">País</label>
      </div>
-            <input class="custom-select" list="browpais" id="BrowPais" name="BrowPais"  ngModel/>
+            <input class="custom-select" list="browpais" id="BrowPais" name="BrowPais" autocomplete="off" ngModel/>
             <datalist id="browpais">
               <option *ngFor="let cbxpai of cbxpais" value=  {{cbxpai}}>
             </datalist>
@@ -42,7 +51,7 @@
           <div class="input-group-prepend">
           <label class="input-group-text" for="BrowTipo">Tipo de Convenio</label>
             </div>
-             <input class="custom-select" list="browtipo" id="BrowTipo" name="BrowTipo" ngModel />
+             <input class="custom-select" list="browtipo" id="BrowTipo" name="BrowTipo" autocomplete="off" ngModel />
                     <datalist id="browtipo" >
                       <option *ngFor="let cbxtip of cbxtipo" value=  {{cbxtip}}>
                     </datalist></div></div>
@@ -73,12 +82,16 @@
     </ng-template>
     <ng-template pTemplate="body" let-busqueda>
       <tr >
-        <td width="30" valign="top">{{busqueda.id}}</td>
-        <td valign="top"><strong>FECHA DE FIRMA:</strong>  {{busqueda.firma}}<br>
-          <strong>VIGENCIA</strong>: {{busqueda.vigencia}} años<br>
+        <td valign="top"><strong>FECHA DE FIRMA:</strong>  {{busqueda.firma}} <span *ngIf="busqueda.vigencia > 0"><br>
+           
+          <strong>VIGENCIA</strong>: {{busqueda.vigencia}} años </span><br>
+          <span *ngIf="busqueda.vigencia == 0">
+           
+            <strong>VIGENCIA</strong>: Indefinida<br></span>
           <strong>PAIS</strong>: {{busqueda.pais}}<br>
-          <strong>ORGANIZACION</strong>:  <a (click)="hideme = !hideme">{{busqueda.organizacion}}</a>
-          <div [hidden]="hideme"> Link de la univerdidad</div><br></td>
+          <strong>ORGANIZACION</strong>:  {{busqueda.organizacion}}
+          <!--<a (click)="hideme = !hideme">{{busqueda.organizacion}}</a>
+          <div [hidden]="hideme"> Link de la univerdidad</div>--><br></td>
         
         <td width="370" valign="top" >{{busqueda.objeto}}</td>
         <td width="200" valign="top" >{{busqueda.tipo}}

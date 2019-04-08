@@ -1,0 +1,11 @@
+
+<div echarts 
+[options]="options" 
+[loading]="!mapLoaded"
+[merge]="mergeoptions"
+(chartClick)="onChartClick($event)"
+(chartMouseOver)="onChartOver($event)"
+(chartMouseOut)="onChartOut($event)"
+></div>
+         
+<router-outlet></router-outlet>

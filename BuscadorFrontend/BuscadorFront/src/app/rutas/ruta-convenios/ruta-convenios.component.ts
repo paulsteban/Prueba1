@@ -26,7 +26,6 @@ cols:any [];
 
   ngOnInit() {
     this.cols = [
-      { field: 'n', header: 'Nº' },
       { field: 'información', header: 'Informacion' },
       { field: 'objeto', header: 'Objeto' },
       { field: 'tipo', header: 'Tipo' },  
@@ -45,18 +44,21 @@ cols:any [];
       {let prueba =valuex.organizacion;
        // console.log(valuex.organizacion);
       return prueba}).filter((valuex, index, self)=>{return self.indexOf(valuex) === index;});
+      this.cbxorganizacion = this.cbxorganizacion.sort();
        //fin cboxorganizacion filtado 
       //llenado Combo box pais
       this.cbxpais = convenios.map((valuex,indice,convenios)=>
       {let prueba =valuex.pais;
         //console.log(valuex.pais);
       return prueba}).filter((valuex, index, self)=>{return self.indexOf(valuex) === index;});
+      this.cbxpais = this.cbxpais.sort();
       //fin cboxpais filtado 
       //llenado Combo box tipo
       this.cbxtipo = convenios.map((valuex,indice,convenios)=>
       {let prueba =valuex.tipo;
         //console.log(valuex.tipo);
       return prueba}).filter((valuex, index, self)=>{return self.indexOf(valuex) === index;});
+      this.cbxtipo = this.cbxtipo.sort();
          //fin cboxtipo filtado 
         console.log("Tipo"+this.cbxtipo.length);
         console.log("Organizacion"+this.cbxorganizacion.length);

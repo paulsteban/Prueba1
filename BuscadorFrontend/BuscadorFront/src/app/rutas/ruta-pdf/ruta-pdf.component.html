@@ -1,6 +1,7 @@
-<h2>PDF Viewer</h2>
+<h2>Convenio</h2>
 <div class="pdf-container">
-  <pdf-viewer [src]="'/assets/'+id+'.pdf'"
+  <pdf-viewer   [src]="'/assets/convenios/'+id+'.pdf'"
               [original-size]="false"
   ></pdf-viewer>
 </div>
+<button type="button" class="btn btn-primary" (click)="regresar()" > Realizar nueva búsqueda</button>

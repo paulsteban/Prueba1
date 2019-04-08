@@ -9,18 +9,24 @@ import { TableModule } from 'primeng/table';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RutaPDFComponent } from './rutas/ruta-pdf/ruta-pdf.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { RutaMapaComponent } from './rutas/ruta-mapa/ruta-mapa.component';
+import { RutaPaisComponent } from './rutas/ruta-pais/ruta-pais.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { ConvenioServicioService } from './servicios/convenio-servicio.service';
 @NgModule({
   declarations: [
     AppComponent,
     RutaConveniosComponent,
-    RutaPDFComponent
+    RutaPDFComponent,
+    RutaMapaComponent,
+    RutaPaisComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule, FormsModule ,
-    TableModule,BrowserAnimationsModule,PdfViewerModule
+    TableModule,BrowserAnimationsModule,PdfViewerModule,NgxEchartsModule
   ],
-  providers: [],
+  providers: [ConvenioServicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

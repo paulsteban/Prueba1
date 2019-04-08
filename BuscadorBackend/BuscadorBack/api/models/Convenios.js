@@ -32,31 +32,37 @@ module.exports = {
     firma:{
       type:'string',
       columnName: 'Firma'
+    }, fin:{
+      type:'string',
+      columnName: 'Fin'
     },
+
     vigencia:{
       type:'number',
       columnName: 'Vigencia'
-    },
+    },/*
     estado:{
       type:'string',
       columnName: 'Estado'
+    },*/
+    
+    organizacion:{
+      type:'string',
+      columnName: 'Organizacion'
     },
     pais:{
       type:'string',
       columnName: 'Pais'
     },
-    organizacion:{
+    tipo:{
       type:'string',
-      columnName: 'Organizacion'
+      columnName: 'Tipo'
     },
-    titulo:{
-      type:'string',
-      columnName: 'Titulo'
-    },
+    
     objeto:{
       type:'string',
       columnName: 'Objeto'
-    },
+    },/*
     ejecucion:{
       type:'string',
       columnName: 'Ejecución'
@@ -64,7 +70,14 @@ module.exports = {
     tipo:{
       type:'string',
       columnName: 'Tipo'
-    }
+    },titulo:{
+      type:'string',
+      columnName: 'Titulo'
+    },
+    url:{
+      type:'string',
+      columnName: 'Url'
+    },*/
     
 
 
