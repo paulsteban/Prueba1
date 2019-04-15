@@ -13,13 +13,17 @@ import { RutaMapaComponent } from './rutas/ruta-mapa/ruta-mapa.component';
 import { RutaPaisComponent } from './rutas/ruta-pais/ruta-pais.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ConvenioServicioService } from './servicios/convenio-servicio.service';
+import { RutaEstudianteComponent } from './rutas/ruta-estudiante/ruta-estudiante.component';
+import { RutaEstudianteConvenioComponent } from './rutas/ruta-estudiante-convenio/ruta-estudiante-convenio.component';
 @NgModule({
   declarations: [
     AppComponent,
     RutaConveniosComponent,
     RutaPDFComponent,
     RutaMapaComponent,
-    RutaPaisComponent
+    RutaPaisComponent,
+    RutaEstudianteComponent,
+    RutaEstudianteConvenioComponent
   ],
   imports: [
     BrowserModule,

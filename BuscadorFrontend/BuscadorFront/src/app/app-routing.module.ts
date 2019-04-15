@@ -4,6 +4,8 @@ import { RutaConveniosComponent } from './rutas/ruta-convenios/ruta-convenios.co
 import { RutaPDFComponent } from './rutas/ruta-pdf/ruta-pdf.component';
 import { RutaMapaComponent } from './rutas/ruta-mapa/ruta-mapa.component';
 import { RutaPaisComponent } from './rutas/ruta-pais/ruta-pais.component';
+import { RutaEstudianteConvenioComponent } from './rutas/ruta-estudiante-convenio/ruta-estudiante-convenio.component';
+import { RutaEstudianteComponent } from './rutas/ruta-estudiante/ruta-estudiante.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,21 @@ const routes: Routes = [
      
       path: ':idPais',
       component: RutaPaisComponent,
+    },
+
+  ]
+},
+{
+  // NOMBRE
+  path: 'convenioestudiante',
+
+  component: RutaEstudianteComponent,
+  // COMPONENTE,
+  children:[
+    {
+     
+      path: ':idPais',
+      component: RutaEstudianteConvenioComponent,
     },
 
   ]
