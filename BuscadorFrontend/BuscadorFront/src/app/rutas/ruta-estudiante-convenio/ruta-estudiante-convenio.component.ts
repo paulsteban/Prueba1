@@ -60,9 +60,9 @@ export class RutaEstudianteConvenioComponent implements OnInit {
     );
   
   }
-  Verpdf(id:number){
+  Verpdf(id:string){
 
-    this._router.navigate(['/pdf-convenios/'+id]);
+    this._router.navigate(['/universidad/'+id]);
   }
 }
 interface ParametrosRutaPais {

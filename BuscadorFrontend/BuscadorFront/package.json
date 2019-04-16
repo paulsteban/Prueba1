@@ -23,6 +23,7 @@
     "echarts": "^4.2.1",
     "ng2-pdf-viewer": "^5.2.3",
     "ngx-echarts": "^4.1.0",
+    "ngx-embed-video": "^1.0.4",
     "primeicons": "^1.0.0",
     "primeng": "^7.0.5",
     "rxjs": "~6.3.3",

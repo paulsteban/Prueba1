@@ -15,6 +15,10 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { ConvenioServicioService } from './servicios/convenio-servicio.service';
 import { RutaEstudianteComponent } from './rutas/ruta-estudiante/ruta-estudiante.component';
 import { RutaEstudianteConvenioComponent } from './rutas/ruta-estudiante-convenio/ruta-estudiante-convenio.component';
+import { RutaMapaProfComponent } from './rutas/ruta-mapa-prof/ruta-mapa-prof.component';
+import { ConvenioProfService } from './servicios/convenio-prof.service';
+import { RutaUniversidadComponent } from './rutas/ruta-universidad/ruta-universidad.component';
+import { EmbedVideo } from 'ngx-embed-video';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,14 +27,16 @@ import { RutaEstudianteConvenioComponent } from './rutas/ruta-estudiante-conveni
     RutaMapaComponent,
     RutaPaisComponent,
     RutaEstudianteComponent,
-    RutaEstudianteConvenioComponent
+    RutaEstudianteConvenioComponent,
+    RutaMapaProfComponent,
+    RutaUniversidadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule, FormsModule ,
-    TableModule,BrowserAnimationsModule,PdfViewerModule,NgxEchartsModule
+    TableModule,BrowserAnimationsModule,PdfViewerModule,NgxEchartsModule,EmbedVideo.forRoot()
   ],
-  providers: [ConvenioServicioService],
+  providers: [ConvenioServicioService,ConvenioProfService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

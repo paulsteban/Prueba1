@@ -150,7 +150,7 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Belarus', value: null},
             { name: 'Belize', value: null},
             { name: 'Bermuda', value: null},
-            { name: 'Bolivia', value: 1 },
+            { name: 'Bolivia', value: null },
             { name: 'Brazil', value: 5 },
             { name: 'Brunei', value: null},
             { name: 'Bhutan', value: null},

@@ -6,6 +6,8 @@ import { RutaMapaComponent } from './rutas/ruta-mapa/ruta-mapa.component';
 import { RutaPaisComponent } from './rutas/ruta-pais/ruta-pais.component';
 import { RutaEstudianteConvenioComponent } from './rutas/ruta-estudiante-convenio/ruta-estudiante-convenio.component';
 import { RutaEstudianteComponent } from './rutas/ruta-estudiante/ruta-estudiante.component';
+import { RutaMapaProfComponent } from './rutas/ruta-mapa-prof/ruta-mapa-prof.component';
+import { RutaUniversidadComponent } from './rutas/ruta-universidad/ruta-universidad.component';
 
 const routes: Routes = [
   {
@@ -20,6 +22,10 @@ const routes: Routes = [
 {
   path:'pdf-convenios/:idconvenio',
   component: RutaPDFComponent
+},
+{
+  path:'universidad/:idUniversidad',
+  component: RutaUniversidadComponent
 },
 {
   // NOMBRE
@@ -50,7 +56,22 @@ const routes: Routes = [
     },
 
   ]
-}
+},
+{
+  // NOMBRE
+  path: 'conveniosprofesor',
+
+  component: RutaMapaProfComponent,
+  // COMPONENTE,
+  children:[
+    {
+     
+      path: ':idPais',
+      component: RutaPaisComponent,
+    },
+
+  ]
+},
 
 ];
 

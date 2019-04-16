@@ -1,0 +1,26 @@
+<div class="container">
+  <!-- Inicio BuscadorImagen -->
+  <p>Conoce mas sobre la universidad</p>
+ <div  class="row">
+     <div class="col-lg-12">
+       {{busquedax.organizacion}}
+       </div>
+      </div>
+      <div  class="row">
+          <div class="col-lg-2">
+          </div>
+          <div class="col-lg-8">
+              <div [innerHtml]="yt_iframe_html"></div>
+            </div>
+            <div class="col-lg-2"></div>
+           </div>
+      <div  class="row">
+          <div class="col-lg-8">
+              {{busquedax.instrucciones}}
+            </div>
+            <div class="col-lg-2">
+              Quieres saber mas sobre la universidad ingresa este <a [href]=auxwebsite>link</a>
+              </div>
+              
+           </div>
+</div>
