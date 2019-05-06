@@ -98,7 +98,7 @@ this.cols = [
    
   });
     // fetch map geo JSON data from server
-    this.http.get('assets/data/custom.geo1.json')
+    this.http.get('assets/data/mapaES.json')
       .subscribe(geoJson => {
         // hide loading:
         this.mapLoaded = true;
@@ -144,7 +144,7 @@ this.cols = [
           }
       },*/
       visualMap: {
-
+        show: false,
         min: 0,
         max: 14,
         text: ['High', 'Low'],
@@ -188,13 +188,13 @@ this.cols = [
             { name: 'Belize', value: null},
             { name: 'Bermuda', value: null},
             { name: 'Bolivia', value: null },
-            { name: 'Brazil', value: 1 },
+            { name: 'Brasil', value: 1 },
             { name: 'Brunei', value: null},
             { name: 'Bhutan', value: null},
             { name: 'Botswana', value: null},
             { name: 'Cape Verde', value: null},
             { name: 'Central African Rep.', value: null},
-            { name: 'Canada', value: 1},
+            { name: 'Canadá', value: 1},
             { name: 'Chile', value: 2 },
             { name: 'China', value: null },
             { name: "Côte d'Ivoire", value: null},
@@ -209,7 +209,7 @@ this.cols = [
             { name: 'Northern Cyprus', value: null},
             { name: 'Cyprus', value: null},
             { name: 'Czech Rep.', value: null},
-            { name: 'Germany', value: 1 },
+            { name: 'Alemania', value: 1 },
             { name: 'Djibouti', value: null},
             { name: 'Denmark', value: null},
             { name: 'Dominican Rep.', value: null },
@@ -217,13 +217,13 @@ this.cols = [
             { name: 'Ecuador', value: null},
             { name: 'Egypt', value: null},
             { name: 'Eritrea', value: null},
-            { name: 'Spain', value: 6 },
+            { name: 'España', value: 6 },
             { name: 'Estonia', value: null},
             { name: 'Ethiopia', value: null},
             { name: 'Finland', value: null},
             { name: 'Fiji', value: null},
             { name: 'Falkland Is.', value: null},
-            { name: 'France', value: 2 },
+            { name: 'Francia', value: 2 },
             { name: 'Gabon', value: null},
             { name: 'United Kingdom', value: null},
             { name: 'Georgia', value: null},
@@ -248,7 +248,7 @@ this.cols = [
             { name: 'Iraq', value: null},
             { name: 'Iceland', value: null},
             { name: 'Israel', value: null},
-            { name: 'Italy', value: 1 },
+            { name: 'Italia', value: 1 },
             { name: 'Jamaica', value: null},
             { name: 'Jordan', value: null},
             { name: 'Japan', value: null},
@@ -256,7 +256,7 @@ this.cols = [
             { name: 'Kenya', value: null },
             { name: 'Kyrgyzstan', value: null},
             { name: 'Cambodia', value: null},
-            { name: 'Korea', value: 2 },
+            { name: 'Corea del Sur', value: 2 },
             { name: 'Kosovo', value: null},
             { name: 'Kuwait', value: null},
             { name: 'Lao PDR', value: null},
@@ -271,7 +271,7 @@ this.cols = [
             { name: 'Morocco', value: null},
             { name: 'Moldova', value: null},
             { name: 'Madagascar', value: null},
-            { name: 'Mexico', value: 3 },
+            { name: 'México', value: 3 },
             { name: 'Macedonia', value: null},
             { name: 'Mali', value: null},
             { name: 'Myanmar', value: null},
@@ -296,7 +296,7 @@ this.cols = [
             { name: 'Peru', value: null},
             { name: 'Philippines', value: null},
             { name: 'Papua New Guinea', value: null},
-            { name: 'Poland', value: 2 },
+            { name: 'Polinia', value: 2 },
             { name: 'Puerto Rico', value: null},
             { name: 'Dem. Rep. Korea', value: null},
             { name: 'Portugal', value: 1 },
@@ -338,7 +338,7 @@ this.cols = [
             { name: 'Uganda', value: null},
             { name: 'Ukraine', value: null},
             { name: 'Uruguay', value: null},
-            { name: 'United States', value: 3 },
+            { name: 'USA', value: 3 },
             { name: 'Uzbekistan', value: null},
             { name: 'Venezuela', value: null},
             { name: 'Vietnam', value: null},

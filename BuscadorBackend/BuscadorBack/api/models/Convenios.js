@@ -62,6 +62,10 @@ module.exports = {
     objeto:{
       type:'string',
       columnName: 'Objeto'
+    },
+    linkpagina:{
+      type:'string',
+      columnName: 'LinkPagina'
     },/*
     ejecucion:{
       type:'string',

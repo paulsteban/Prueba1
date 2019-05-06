@@ -67,7 +67,7 @@ export class RutaEstudianteComponent implements OnInit {
 
 
     // fetch map geo JSON data from server
-    this.http.get('assets/data/custom.geo1.json')
+    this.http.get('assets/data/mapaES.json')
       .subscribe(geoJson => {
         // hide loading:
         this.mapLoaded = true;
@@ -84,6 +84,7 @@ export class RutaEstudianteComponent implements OnInit {
   inicaropciones(aux) {
     this.options = {
       title: {
+        show:false,
         text: 'Convenios EPN',
         left: 'center',
         top: 'top'
@@ -95,19 +96,17 @@ export class RutaEstudianteComponent implements OnInit {
 
 
       },
-      /*toolbox: {
+      toolbox: {
           show: true,
           orient: 'vertical',
           left: 'right',
           top: 'center',
           feature: {
-              dataView: {readOnly: false},
-              restore: {},
-              saveAsImage: {}
+              restore: { show: true,title: 'resetear\nmapa',},
           }
-      },*/
+      },
       visualMap: {
-
+        show:false,
         min: 0,
         max: 14,
         text: ['High', 'Low'],
@@ -151,13 +150,13 @@ export class RutaEstudianteComponent implements OnInit {
             { name: 'Belize', value: null},
             { name: 'Bermuda', value: null},
             { name: 'Bolivia', value: null },
-            { name: 'Brazil', value: 2 },
+            { name: 'Brasil', value: 2 },
             { name: 'Brunei', value: null},
             { name: 'Bhutan', value: null},
             { name: 'Botswana', value: null},
             { name: 'Cape Verde', value: null},
             { name: 'Central African Rep.', value: null},
-            { name: 'Canada', value: 2 },
+            { name: 'Canadá', value: 2 },
             { name: 'Chile', value: 2 },
             { name: 'China', value: 1 },
             { name: "Côte d'Ivoire", value: null},
@@ -172,7 +171,7 @@ export class RutaEstudianteComponent implements OnInit {
             { name: 'Northern Cyprus', value: null},
             { name: 'Cyprus', value: null},
             { name: 'Czech Rep.', value: null},
-            { name: 'Germany', value: 2 },
+            { name: 'Alemania', value: 2 },
             { name: 'Djibouti', value: null},
             { name: 'Denmark', value: null},
             { name: 'Dominican Rep.', value: null },
@@ -180,7 +179,7 @@ export class RutaEstudianteComponent implements OnInit {
             { name: 'Ecuador', value: null},
             { name: 'Egypt', value: null},
             { name: 'Eritrea', value: null},
-            { name: 'Spain', value: 1 },
+            { name: 'España', value: 1 },
             { name: 'Estonia', value: null},
             { name: 'Ethiopia', value: null},
             { name: 'Finland', value: null},
@@ -211,7 +210,7 @@ export class RutaEstudianteComponent implements OnInit {
             { name: 'Iraq', value: null},
             { name: 'Iceland', value: null},
             { name: 'Israel', value: null},
-            { name: 'Italy', value: 1 },
+            { name: 'Italia', value: 1 },
             { name: 'Jamaica', value: null},
             { name: 'Jordan', value: null},
             { name: 'Japan', value: null},
@@ -219,7 +218,7 @@ export class RutaEstudianteComponent implements OnInit {
             { name: 'Kenya', value: null },
             { name: 'Kyrgyzstan', value: null},
             { name: 'Cambodia', value: null},
-            { name: 'Korea', value: 3 },
+            { name: 'Corea del Sur', value: 3 },
             { name: 'Kosovo', value: null},
             { name: 'Kuwait', value: null},
             { name: 'Lao PDR', value: null},
@@ -234,7 +233,7 @@ export class RutaEstudianteComponent implements OnInit {
             { name: 'Morocco', value: null},
             { name: 'Moldova', value: null},
             { name: 'Madagascar', value: null},
-            { name: 'Mexico', value: 1 },
+            { name: 'México', value: 1 },
             { name: 'Macedonia', value: null},
             { name: 'Mali', value: null},
             { name: 'Myanmar', value: null},
@@ -259,14 +258,14 @@ export class RutaEstudianteComponent implements OnInit {
             { name: 'Peru', value: null},
             { name: 'Philippines', value: null},
             { name: 'Papua New Guinea', value: null},
-            { name: 'Poland', value: 1 },
+            { name: 'Polonia', value: 1 },
             { name: 'Puerto Rico', value: null},
             { name: 'Dem. Rep. Korea', value: null},
             { name: 'Portugal', value: null },
             { name: 'Paraguay', value: null},
             { name: 'Qatar', value: null},
             { name: 'Romania', value: null},
-            { name: 'Russia', value: 1 },
+            { name: 'Rusia', value: 1 },
             { name: 'Rwanda', value: null},
             { name: 'W. Sahara', value: null},
             { name: 'Saudi Arabia', value: null},
@@ -301,7 +300,7 @@ export class RutaEstudianteComponent implements OnInit {
             { name: 'Uganda', value: null},
             { name: 'Ukraine', value: null},
             { name: 'Uruguay', value: null},
-            { name: 'United States', value: 2 },
+            { name: 'USA', value: 2 },
             { name: 'Uzbekistan', value: null},
             { name: 'Venezuela', value: null},
             { name: 'Vietnam', value: null},

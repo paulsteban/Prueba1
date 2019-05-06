@@ -34,7 +34,8 @@ import { EmbedVideo } from 'ngx-embed-video';
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule, FormsModule ,
-    TableModule,BrowserAnimationsModule,PdfViewerModule,NgxEchartsModule,EmbedVideo.forRoot()
+    TableModule,BrowserAnimationsModule,PdfViewerModule,NgxEchartsModule,EmbedVideo.forRoot(),
+    
   ],
   providers: [ConvenioServicioService,ConvenioProfService],
   bootstrap: [AppComponent]

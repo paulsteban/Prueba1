@@ -24,7 +24,7 @@ export class RutaPDFComponent implements OnInit {
   }
   regresar(){
 
-    this._router.navigate(['/convenios/']);
+    this._router.navigate(['/mapa/']);
   }
 
 }

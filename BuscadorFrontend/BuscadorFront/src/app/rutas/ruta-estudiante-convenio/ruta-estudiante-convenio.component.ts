@@ -19,10 +19,8 @@ export class RutaEstudianteConvenioComponent implements OnInit {
   ngOnInit() {
 
     this.cols = [
-      { field: 'información', header: 'Informacion' },
-      { field: 'objeto', header: 'Objeto' },
-      { field: 'tipo', header: 'Tipo' },  
-      { field: 'documento', header: 'Documento' }
+      { field: 'información', header: 'Información' },  
+      { field: 'acción', header: 'Acción' }
 
   ];
 
@@ -62,7 +60,7 @@ export class RutaEstudianteConvenioComponent implements OnInit {
   }
   Verpdf(id:string){
 
-    this._router.navigate(['/universidad/'+id]);
+    this._router.navigate(['https://oficinainternacional.epn.edu.ec/index.php/es/']);
   }
 }
 interface ParametrosRutaPais {

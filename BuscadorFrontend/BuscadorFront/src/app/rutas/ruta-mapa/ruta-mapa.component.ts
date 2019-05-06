@@ -67,7 +67,7 @@ export class RutaMapaComponent implements OnInit {
 
 
     // fetch map geo JSON data from server
-    this.http.get('assets/data/custom.geo1.json')
+    this.http.get('assets/data/mapaES.json')
       .subscribe(geoJson => {
         // hide loading:
         this.mapLoaded = true;
@@ -84,6 +84,7 @@ export class RutaMapaComponent implements OnInit {
   inicaropciones(aux) {
     this.options = {
       title: {
+        show: false,
         text: 'Convenios EPN',
         left: 'center',
         top: 'top'
@@ -95,19 +96,17 @@ export class RutaMapaComponent implements OnInit {
 
 
       },
-      /*toolbox: {
+      toolbox: {
           show: true,
           orient: 'vertical',
           left: 'right',
           top: 'center',
           feature: {
-              dataView: {readOnly: false},
-              restore: {},
-              saveAsImage: {}
+              restore: { show: true,title: 'resetear\nmapa',},
           }
-      },*/
+      },
       visualMap: {
-
+        show: false,
         min: 0,
         max: 14,
         text: ['High', 'Low'],
@@ -140,7 +139,7 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Azerbaijan', value: null},
             { name: 'Baikonur', value: null},
             { name: 'Burundi', value: null},
-            { name: 'Belgium', value: 1 },
+            { name: 'Bélgica', value: 1 },
             { name: 'Benin', value: null},
             { name: 'Burkina Faso', value: null},
             { name: 'Bangladesh', value: null},
@@ -151,13 +150,13 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Belize', value: null},
             { name: 'Bermuda', value: null},
             { name: 'Bolivia', value: null },
-            { name: 'Brazil', value: 5 },
+            { name: 'Brasil', value: 5 },
             { name: 'Brunei', value: null},
             { name: 'Bhutan', value: null},
             { name: 'Botswana', value: null},
             { name: 'Cape Verde', value: null},
             { name: 'Central African Rep.', value: null},
-            { name: 'Canada', value: 6 },
+            { name: 'Canadá', value: 6 },
             { name: 'Chile', value: 3 },
             { name: 'China', value: 5 },
             { name: "Côte d'Ivoire", value: null},
@@ -172,21 +171,21 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Northern Cyprus', value: null},
             { name: 'Cyprus', value: null},
             { name: 'Czech Rep.', value: null},
-            { name: 'Germany', value: 4 },
+            { name: 'Alemania', value: 4 },
             { name: 'Djibouti', value: null},
             { name: 'Denmark', value: null},
-            { name: 'Dominican Rep.', value: 1 },
+            { name: 'República Dominicana', value: 1 },
             { name: 'Algeria', value: null},
             { name: 'Ecuador', value: null},
             { name: 'Egypt', value: null},
             { name: 'Eritrea', value: null},
-            { name: 'Spain', value: 14 },
+            { name: 'España', value: 14 },
             { name: 'Estonia', value: null},
             { name: 'Ethiopia', value: null},
             { name: 'Finland', value: null},
             { name: 'Fiji', value: null},
             { name: 'Falkland Is.', value: null},
-            { name: 'France', value: 5 },
+            { name: 'Francia', value: 5 },
             { name: 'Gabon', value: null},
             { name: 'United Kingdom', value: null},
             { name: 'Georgia', value: null},
@@ -211,7 +210,7 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Iraq', value: null},
             { name: 'Iceland', value: null},
             { name: 'Israel', value: null},
-            { name: 'Italy', value: 3 },
+            { name: 'Italia', value: 3 },
             { name: 'Jamaica', value: null},
             { name: 'Jordan', value: null},
             { name: 'Japan', value: null},
@@ -219,7 +218,7 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Kenya', value: null },
             { name: 'Kyrgyzstan', value: null},
             { name: 'Cambodia', value: null},
-            { name: 'Korea', value: 5 },
+            { name: 'Corea del Sur', value: 5 },
             { name: 'Kosovo', value: null},
             { name: 'Kuwait', value: null},
             { name: 'Lao PDR', value: null},
@@ -234,7 +233,7 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Morocco', value: null},
             { name: 'Moldova', value: null},
             { name: 'Madagascar', value: null},
-            { name: 'Mexico', value: 6 },
+            { name: 'México', value: 6 },
             { name: 'Macedonia', value: null},
             { name: 'Mali', value: null},
             { name: 'Myanmar', value: null},
@@ -259,14 +258,14 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Peru', value: null},
             { name: 'Philippines', value: null},
             { name: 'Papua New Guinea', value: null},
-            { name: 'Poland', value: 2 },
+            { name: 'Polonia', value: 2 },
             { name: 'Puerto Rico', value: null},
             { name: 'Dem. Rep. Korea', value: null},
             { name: 'Portugal', value: 1 },
             { name: 'Paraguay', value: null},
             { name: 'Qatar', value: null},
             { name: 'Romania', value: null},
-            { name: 'Russia', value: 3 },
+            { name: 'Rusia', value: 3 },
             { name: 'Rwanda', value: null},
             { name: 'W. Sahara', value: null},
             { name: 'Saudi Arabia', value: null},
@@ -284,7 +283,7 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Slovenia', value: null},
             { name: 'Sweden', value: null},
             { name: 'Swaziland', value: null},
-            { name: 'Switzerland', value: 1 },
+            { name: 'Suiza', value: 1 },
             { name: 'Syria', value: null},
             { name: 'Chad', value: null},
             { name: 'Togo', value: null},
@@ -293,7 +292,7 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Taiwan', value: null},
             { name: 'Turkmenistan', value: null},
             { name: 'Timor-Leste', value: null},
-            { name: 'Trinidad and Tobago', value: 1 },
+            { name: 'Trinidad y Tobago', value: 1 },
             { name: 'Tunisia', value: null},
             { name: 'Turkey', value: null},
             { name: 'England', value: null},
@@ -301,7 +300,7 @@ export class RutaMapaComponent implements OnInit {
             { name: 'Uganda', value: null},
             { name: 'Ukraine', value: null},
             { name: 'Uruguay', value: null},
-            { name: 'United States', value: 10 },
+            { name: 'USA', value: 10 },
             { name: 'Uzbekistan', value: null},
             { name: 'Venezuela', value: null},
             { name: 'Vietnam', value: null},

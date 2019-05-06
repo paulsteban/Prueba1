@@ -8,6 +8,7 @@ export interface Convenio {
     tipo: string;    
     updatedAt: number;
     vigencia: number;
+    linkpagina:string;
    // estado: string;
    // ejecucion: string;
   //  titulo: string;

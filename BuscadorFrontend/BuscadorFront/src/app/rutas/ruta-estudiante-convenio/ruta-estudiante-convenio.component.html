@@ -12,20 +12,12 @@
      </ng-template>
      <ng-template pTemplate="body" let-busqueda>
        <tr >
-         <td valign="top"><strong>FECHA DE FIRMA:</strong>  {{busqueda.firma}} <span *ngIf="busqueda.vigencia > 0"><br>
-            
-           <strong>VIGENCIA</strong>: {{busqueda.vigencia}} años </span><br>
-           <span *ngIf="busqueda.vigencia == 0">
-            
-             <strong>VIGENCIA</strong>: Indefinida<br></span>
-           <strong>PAIS</strong>: {{busqueda.pais}}<br>
+         <td valign="top">
            <strong>ORGANIZACION</strong>:  {{busqueda.organizacion}}
-           
-         
-         <td width="370" valign="top" >{{busqueda.objeto}}</td>
-         <td width="200" valign="top" >{{busqueda.tipo}}
-         </td>
-         <td width="370" valign="top" ><button type="button" class="btn btn-primary" (click)="Verpdf(busqueda.organizacion)">Aplica</button></td>
+                   
+          </td>
+         <td width="370" valign="top" ><a class="btn btn-primary"
+          [href]=busqueda.linkpagina target="_blank">Aplica</a></td>
      </tr>
      </ng-template>
    </p-table>
