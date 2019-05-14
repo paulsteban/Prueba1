@@ -1,7 +1,6 @@
 <h2 style="color: blue"> {{paistxt}} </h2>
 
-<div class="table-responsive"> 
-    <p class="text-danger" *ngIf="busqueda.length == 0" >Cargando resultados...</p> 
+<div class="table-responsive">  
    <p-table [columns]="cols" [value]="busqueda" [paginator]="true" [rows]="5" *ngIf="busqueda.length > 0" >
      <ng-template pTemplate="header" let-columns>
          <tr >

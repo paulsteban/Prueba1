@@ -41,6 +41,17 @@ export class RutaEstudianteConvenioComponent implements OnInit {
     //verificar si llegan los datos
     //console.log(convenios);
     this.totalcomvenios=convenios;
+
+    this.totalcomvenios.push({objeto:"Movilidad académica",organizacion:"Universidad Nacional del Litoral",pais:"Argentina",linkpagina:"https://oficinainternacional.epn.edu.ec/index.php/es/convenios-intercambio/146-universidad-nacional-del-litoral"});
+    this.totalcomvenios.push({objeto:"Movilidad académica",organizacion:"Universidad Tecnológica de Panamá",pais:"Panama",linkpagina:"https://oficinainternacional.epn.edu.ec/index.php/es/convenios-intercambio/153-universidad-tecnologica-de-panama"});
+    this.totalcomvenios.push({objeto:"Movilidad académica",organizacion:"Universidade Estadual de Campinas - UNICAMP",pais:"Brasil",linkpagina:"https://oficinainternacional.epn.edu.ec/index.php/es/convenios-intercambio/147-universidade-estadual-de-campinas-unicamp"});
+    this.totalcomvenios.push({objeto:"Movilidad académica",organizacion:"Universidad Pedagógica Nacional",pais:"Colombia",linkpagina:"https://oficinainternacional.epn.edu.ec/index.php/es/convenios-intercambio/148-universidad-pedagogica-nacional"});
+    this.totalcomvenios.push({objeto:"Movilidad académica",organizacion:"Universidad El Bosque",pais:"Colombia",linkpagina:"https://oficinainternacional.epn.edu.ec/index.php/es/convenios-intercambio/149-universidad-el-bosque"});
+    this.totalcomvenios.push({objeto:"Movilidad académica",organizacion:"El Colegio de Michoacán A.C.",pais:"México",linkpagina:"https://oficinainternacional.epn.edu.ec/index.php/es/convenios-intercambio/150-el-colegio-de-michoacan-a-c"});
+    this.totalcomvenios.push({objeto:"Movilidad académica",organizacion:"Instituto Tecnológico de Sonora",pais:"México",linkpagina:"https://oficinainternacional.epn.edu.ec/index.php/es/convenios-intercambio/152-instituto-tecnologico-de-sonora"});
+    this.totalcomvenios.push({objeto:"Movilidad académica",organizacion:"UNIVERSIDAD DE CONCEPCIÓN",pais:"Chile",linkpagina:"https://oficinainternacional.epn.edu.ec/index.php/es/convenios-intercambio/140-universidad-de-concepcion"});
+
+
     const helado = this.totalcomvenios.forEach((valuex)=>{if ((valuex.pais==parametros.idPais)&&(valuex.objeto=="Movilidad académica")){
       this.busqueda.push(valuex);
     
